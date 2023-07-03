@@ -1,13 +1,45 @@
-// hl-img elememt support
-
-function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+var css = `
+    img.imageshow {
+    position: absolute;
+    margin: auto;
+    top: 20%;
+    bottom: 20%;
+    left: 10%;
+    right: 10%;
+    z-index: 900000;
+    background-color: whitesmoke;
+    border-radius: 0%;
+    border: currentColor solid .2em;
+    box-shadow: -53px -38px 95px 0px rgba(0, 0, 0, 0.86);
+    -webkit-box-shadow: -53px -38px 95px 0px rgba(0, 0, 0, 0.86);
+    -moz-box-shadow: -53px -38px 95px 0px rgba(0, 0, 0, 0.86);
 }
+
+img.showableimage {
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#closenotifelm {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    background-color: black;
+    color: white;
+    padding: 4px;
+    border: 2.5px solid gray;
+    z-index: 900001;
+}
+`
+
+var styleSheet = document.createElement("style")
+styleSheet.innerText = css
+document.head.appendChild(styleSheet)
+
 var imoges = document.getElementsByTagName("hl-img");
 for (var i = 0; i < imoges.length; i++) {
-    var newimogesid = "showableimage-" + getRandomIntInclusive(1000, 9999);
+    var newimogesid = "showableimage-" + (Math.floor(Math.random() * (Math.floor(9999) - Math.ceil(1000) + 1) + Math.ceil(1000)));
     var newimoges = document.createElement("img");
     newimoges.alt = (imoges.item(i)).getAttribute('alt');
     newimoges.id = newimogesid;
