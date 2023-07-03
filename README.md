@@ -1,4 +1,5 @@
 # hl-img
+[![](https://data.jsdelivr.com/v1/package/gh/strawmelonjuice/hl-img.js/badge?style=rounded)](https://www.jsdelivr.com/package/gh/strawmelonjuice/hl-img.js)
 I added a custom element into my site for highlightable images, now I need to make it a repo so I don't lose track.
 ## NOTE:
 > Google does not like the use of elements like these, mainly because browsers or bots that dont fire the javascript, will not be able to see any images.
