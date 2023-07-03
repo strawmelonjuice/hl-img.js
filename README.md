@@ -7,7 +7,8 @@ I added a custom element into my site for highlightable images, now I need to ma
 
 ## Embed using jsdelivr
 ### Directly from main
-**May be a bit behind!**
+**May be a bit behind on GitHub due to cache refreshes!**
+
 _Minified_
 ```html
 <script src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@main/hl-img.min.js"></script>
