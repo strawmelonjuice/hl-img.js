@@ -3,7 +3,7 @@
 
 I added a custom element into my site for highlightable images, now I need to make it a repo so I don't lose track.
 ## NOTE:
-> Google does not like the use of elements like these, mainly because browsers or bots that dont fire the javascript, will not be able to see any images.
+> Google does not like the use of elements like these, mainly because browsers or bots that don't fire the javascript, will not be able to see any images.
 
 ## Embed using jsdelivr
 ### Directly from main
