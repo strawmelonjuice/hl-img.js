@@ -20,3 +20,6 @@ The `<img>`'s `alt`-attribute is copied one-on-one. No changes in functioning.
 #### `src`
 `<hl-img>`-elements do support `<img>`'s `src`-attribute, but will only use it as a fallback, in case `preview` is not specified.
 ### Future support
+- `title`
+- `width` and `height`
+- `style`
