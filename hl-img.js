@@ -34,14 +34,6 @@ if (document.getElementsByClassName("showableimage")[0]) {
     closenotif.innerHTML = "<p>Click on the image again to put it back in place!</p>";
     closenotif.id = "closenotifelm";
     closenotif.style.display = "none";
-    closenotif.style.position = "absolute";
-    closenotif.style.top = "2em";
-    closenotif.style.right = "2em";
-    closenotif.style.backgroundColor = "black";
-    closenotif.style.color = "white";
-    closenotif.style.padding = "4px";
-    closenotif.style.border = "gray solid 2.5px";
-    closenotif.style.zIndex = "900001";
     document.body.appendChild(closenotif);
 }
 closenotif = document.getElementById("closenotifelm");
