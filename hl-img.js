@@ -55,6 +55,7 @@ for (var i = 0; i < imoges.length; i++) {
         newimoges.dataset.showsrc = newimoges.dataset.prevsrc;
     }
     newimoges.style.maxWidth = "80%";
+    newimoges.title = "Click to show image";
     newimoges.classList.add('showableimage');
     (imoges.item(i)).parentNode.replaceChild(newimoges, (imoges.item(i)));
 }
@@ -77,6 +78,7 @@ function imageshow(action, elem) {
             elem.setAttribute('onclick', 'imageshow(0, this)');
             elem.src = elem.dataset.showsrc;
             elem.style.opacity = "100%";
+            elem.title = "";
             closenotif.style.display = "block";
         }
         , 700);
@@ -89,6 +91,7 @@ function imageshow(action, elem) {
             elem.setAttribute('onclick', 'imageshow(1, this)');
             elem.src = elem.dataset.prevsrc;
             elem.style.opacity = "100%";
+            elem.title = "Click to show image";
             closenotif.style.display = "none";
         }
             , 700);
