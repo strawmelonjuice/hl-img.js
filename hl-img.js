@@ -14,13 +14,11 @@ var css = `
     -webkit-box-shadow: -53px -38px 95px 0px rgba(0, 0, 0, 0.86);
     -moz-box-shadow: -53px -38px 95px 0px rgba(0, 0, 0, 0.86);
 }
-
 img.showableimage {
     -webkit-transition: opacity 0.5s ease-in-out;
     -moz-transition: opacity 0.5s ease-in-out;
     transition: opacity 0.5s ease-in-out;
 }
-
 #closenotifelm {
     position: absolute;
     top: 2em;
