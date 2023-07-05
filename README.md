@@ -6,16 +6,16 @@ I added a custom element into my site for highlightable images, now I need to ma
 > Google does not like the use of elements like these, mainly because browsers or bots that don't fire the javascript, will not be able to see any images.
 
 ## Embed using jsdelivr
-### Directly from main
+### Latest version
 **May be a bit behind on GitHub due to cache refreshes!**
 
 _Minified_
 ```html
-<script defer src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@main/hl-img.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@latest/hl-img.min.js"></script>
 ```
 _Unminified_
 ```html
-<script defer src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@main/hl-img.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@latest/hl-img.js"></script>
 ```
 Thanks to the `defer` attribute, they'll load after the body is loaded, so you _can_ place them anywhere. However, for best reliability, please add this at the end of the `<body>`.
 
