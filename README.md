@@ -11,11 +11,11 @@ I added a custom element into my site for highlightable images, now I need to ma
 
 _Minified_
 ```html
-<script src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@main/hl-img.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@main/hl-img.min.js"></script>
 ```
 _Unminified_
 ```html
-<script src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@main/hl-img.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@main/hl-img.js"></script>
 ```
 ### Version-specific
 For version-specific jsdelivr's, see <https://www.jsdelivr.com/package/gh/strawmelonjuice/hl-img.js?tab=files>.
