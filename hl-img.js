@@ -77,7 +77,7 @@ for (var i = 0; i < imoges.length; i++) {
 if (document.getElementsByClassName("showableimage")[0]) {
   const closenotif = document.createElement("div");
   closenotif.innerHTML =
-    "<p>Click on the image again to put it back in place!</p>";
+    "<p>Click outside of the image again to put it back in place!</p>";
   closenotif.id = "closenotifelm";
   closenotif.style.display = "none";
   document.body.appendChild(closenotif);
@@ -90,12 +90,23 @@ function imageshow(action, elem) {
     setTimeout(function () {
       console.log("2/2 Zooming in to " + elem.id);
       elem.classList.add("imageshow");
-      elem.setAttribute("onclick", "imageshow(0, this)");
+      elem.setAttribute("onclick", "");
       elem.src = elem.dataset.showsrc;
       elem.style.opacity = "100%";
       elem.title = "";
       closenotif.style.display = "block";
     }, 700);
+    const abortController = new AbortController();
+    window.addEventListener(
+      "click",
+      function (e) {
+        if (!elem.contains(e.target)) {
+          imageshow(0, elem);
+          abortController.abort();
+        }
+      },
+      { signal: abortController.signal }
+    );
   } else {
     console.log("1/2 Zooming out of " + elem.id);
     elem.style.opacity = "0%";
