@@ -17,7 +17,10 @@ _Unminified_
 ```html
 <script defer src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@main/hl-img.js"></script>
 ```
+Thanks to the `defer` attribute, they'll load after the body is loaded, so you _can_ place them anywhere. However, for best reliability, please add this at the end of the `<body>`.
+
 ### Version-specific
+
 For version-specific jsdelivr's, see <https://www.jsdelivr.com/package/gh/strawmelonjuice/hl-img.js?tab=files>.
 ## Attributes
 ### An example
@@ -30,12 +33,31 @@ For version-specific jsdelivr's, see <https://www.jsdelivr.com/package/gh/strawm
 The `preview`-attribute is used as the `src` attribute when the image is _not_ in highlight-mode. If not specified, will be inherited from `src`.
 #### `highlight`
 The `highlight`-attribute is used as the `src` attribute when the image is currently in highlight-mode. If not specified, will be inherited from `preview`.
+
+#### `href`
+
+`href` attributes specify which link to open on clicking on the highlighted image.
+
 ### Inherited
 #### `alt`
 The `<img>`'s `alt`-attribute is copied one-on-one. No changes in functioning.
 #### `src`
 `<hl-img>`-elements do support `<img>`'s `src`-attribute, but will only use it as a fallback, in case `preview` is not specified.
+
+#### `style`
+
+Styles are inherited, but may be altered by `hl-img.js`.
+
+#### `id` and `class`
+
+Ids and classes are inherited, however, if none are specified, `hl-img.js` will assign them. It will also add the `hl-image` class in all cases.
+
+#### `width` and `height`
+
+Are inherited.
+
 ### Future support
-- ~~`title`~~ used for "Click to show image" now
-- `width` and `height`
-- `style`
+
+- Closing modal styling
+
+Add an issue if you're missing anything.
