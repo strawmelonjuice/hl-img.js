@@ -7,35 +7,38 @@ console.log(
 
 var css = `
     img.imageshow {
-    position: absolute;
-    margin: auto;
-    top: 20%;
-    bottom: 20%;
-    left: 10%;
-    right: 10%;
-    z-index: 900000;
-    background-color: whitesmoke;
-    border-radius: 0%;
-    border: currentColor solid .2em;
-    box-shadow: -53px -38px 95px 0px rgba(0, 0, 0, 0.86);
-    -webkit-box-shadow: -53px -38px 95px 0px rgba(0, 0, 0, 0.86);
-    -moz-box-shadow: -53px -38px 95px 0px rgba(0, 0, 0, 0.86);
-}
-img.hl-img {
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    transition: opacity 0.5s ease-in-out;
-}
-#closenotifelm {
-    position: absolute;
-    top: 2em;
-    right: 2em;
-    background-color: black;
-    color: white;
-    padding: 4px;
-    border: 2.5px solid gray;
-    z-index: 900001;
-}
+      position: absolute;
+      margin: auto;
+      top: 20%;
+      bottom: 20%;
+      left: 10%;
+      right: 10%;
+      z-index: 900000;
+      background-color: whitesmoke;
+      border-radius: 0%;
+      border: currentColor solid .2em;
+      box-shadow: -53px -38px 95px 0px rgba(0, 0, 0, 0.86);
+        -webkit-box-shadow: -53px -38px 95px 0px rgba(0, 0, 0, 0.86);
+        -moz-box-shadow: -53px -38px 95px 0px rgba(0, 0, 0, 0.86);
+  }
+  img.hl-img {
+      -webkit-transition: opacity 0.5s ease-in-out;
+      -moz-transition: opacity 0.5s ease-in-out;
+      transition: opacity 0.5s ease-in-out;
+  }
+  .hl-img:not(.imageshow) {
+    cursor: zoom-in;
+  }
+  #closenotifelm {
+      position: absolute;
+      top: 2em;
+      right: 2em;
+      background-color: black;
+      color: white;
+      padding: 4px;
+      border: 2.5px solid gray;
+      z-index: 900001;
+  }
 `;
 
 var styleSheet = document.createElement("style");
@@ -119,6 +122,7 @@ function imageshow(action, elem) {
           '<p>Click outside of the image to put it back in place! Or click on the image again to open <a href="' +
           elem.dataset.href +
           '" target="_blank">this link</a> in a new tab.</p>';
+        elem.style.cursor = "pointer";
       } else {
         closenotif.innerHTML =
           "<p>Click outside of the image to put it back in place!</p>";
@@ -146,6 +150,7 @@ function imageshow(action, elem) {
       console.log("2/2 Zooming out of " + elem.id);
       elem.classList.remove("imageshow");
       elem.setAttribute("onclick", "imageshow(1, this)");
+      elem.style.cursor = "";
       elem.src = elem.dataset.prevsrc;
       elem.style.opacity = "100%";
       elem.title = "Click to show image";
