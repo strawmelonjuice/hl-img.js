@@ -54,38 +54,15 @@ Add an issue if you're missing anything.
 
 Before calling `hl-img.js`, you can declare some of it's options, if you don't, their defaults will be used.
 
-Here is an example of one such declarations:
-
-```javascript
-const hlimg_options = {
-  timing_fade_opacity: "0.5s",
-  timing_pop_location: 700,
-  styling_closenotif_positioning: "top: 2em; right: 2em;",
-  styling_closenotif_colors_background: "#000",
-  styling_closenotif_colors_text: "#FFF",
-  styling_closenotif_border_thickness: "2.5px",
-  styling_closenotif_border_type: "solid",
-  styling_closenotif_border_color: "gray",
-  styling_closenotif_padding: "4px",
-  styling_imageshow_zIndex: 900,
-  styling_imageshow_positioning:
-    "top: 20%; bottom: 20%; left: 10%; right: 10%;",
-  styling_imageshow_colors_background: "#f5f5f5",
-  styling_imageshow_border_thickness: ".2em",
-  styling_imageshow_border_type: "solid",
-  styling_imageshow_border_color: "currentColor",
-  styling_imageshow_border_radius: "0%",
-};
-```
-
-This one is defining all the default options --these options would also be used if this wasn't defined beforehand. But all of these values _can_ be changed.
-
-Note that these changes happen globally, so they'll be applied to the entire page, the moment `hl-img.js` is ran.
-
 An example of how an custom configuration would look in HTML:
 
 ```HTML
-...
+<html>
+    <head>
+        ...
+    </head>
+<body>
+   ...
 <script type="text/javascript">
     const hlimg_options = {
       styling_closenotif_positioning: "bottom: 2em; right: 4em;",
@@ -101,14 +78,43 @@ An example of how an custom configuration would look in HTML:
 </html>
 ```
 
+Note that these changes happen globally, so they'll be applied to the entire page, the moment `hl-img.js` is ran.
+
 ### List of customization variables
 
-- `timing_fade_opacity`  (number) – The time in seconds of the fade-in/fade-out animation on the images. Default: `0.5`
-- `timing_pop_location` (number)  – Time in miliseconds to wait before moving images. By default a little longer than `timing_fade_opacity` so that it can run its animation. Default: `700`
-- `styling_closenotif_positioning` (string) – CSS code for positioning the closing modal. Default: `top: 2em; right: 2em;`
-- `styling_closenotif_colors_background` (string) – Background color for the closing modal. Default: `#000`
-- `styling_closenotif_colors_text` (string) – Text color for the closing modal. Default: `#FFF`
-- 
--  –  –  –  –  –  –  –  –  –  –  –  –  –  – 
--  –  –  –  –  –  –  –  –  –  –  –  –  –  –  – 
--  –  –  –  –  –  –  –  –  –  –  –  –  –  –  – 
+- Timing:
+
+  - `timing_fade_opacity`  (number) – The time in seconds of the fade-in/fade-out animation on the images. Default: `0.5`
+
+  - `timing_pop_location` (number)  – Time in miliseconds to wait before moving images. By default a little longer than `timing_fade_opacity` so that it can run its animation. Default: `700`
+
+- Styling
+
+  - Closing modal
+
+    - `styling_closenotif_positioning` (string) – CSS code for positioning the closing modal. Default: `"top: 2em; right: 2em;"`
+
+    - `styling_closenotif_colors_background` (string) – Background colour for the closing modal. Default: `"#000"`
+
+    - `styling_closenotif_colors_text` (string) – Text colour for the closing modal. Default: `"#FFF"`
+
+    - `styling_closenotif_border_thickness` (string) – Border thickness for the closing modal. Default: `"2.5px"`
+
+    - `styling_closenotif_border_type` (string) – Type of the closing modal's border, CSS value. Default: `"solid"`
+
+    - `styling_closenotif_border_color`  (string) –  The colour of the closing modal's border. Default: `"#848484"`
+
+    - `styling_closenotif_padding` (string) – Padding for the text inside the closing modal. Default: `"4px"`
+
+  - Highlighted image
+
+    - `styling_imageshow_zIndex` (number) – Z-Index for the image when highlighted, the Z-Index of the closing modal will always be this +1. CSS value. Default: `900`
+
+    -   `styling_imageshow_positioning` (string) – CSS code for positioning the highlighted image. Default: `top: 20%; bottom: 20%; left: 10%; right: 10%;"`
+
+    - `styling_imageshow_colors_background` (string) – Background colour for highlighted image -- shows when image is transparent. Default: `"#f5f5f5"`
+
+    - `styling_imageshow_border_thickness` (string) – Border thickness for the highlighted image. Default: `".2em"`
+    - `styling_imageshow_border_type` (string) – Type of the highlighted images' border, CSS value. Default: `"solid"`
+    - `styling_imageshow_border_color` (string) – Highlighted images' border color. Default:`"currentColor"`
+    - `styling_imageshow_border_radius` – Border radius for highlighted image. Default:`"0%"`
