@@ -200,7 +200,7 @@ function imageshow(action, elem) {
     }, hlimg_opt.timing_pop_location);
   }
 }
-console.log(
+console.info(
   "%c hl-img.js by Mar was loaded!\n %cfor more info check it out on GitHub:\n%chttps://github.com/strawmelonjuice/hl-img.js/",
   "color: #8A2BE2; font-size:15px;",
   "color: black; font-size:12px;",
