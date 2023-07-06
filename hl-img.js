@@ -16,6 +16,7 @@ const hlimg_options_default = {
   styling_imageshow_border_type: "solid",
   styling_imageshow_border_color: "currentColor",
   styling_imageshow_border_radius: "0%",
+  styling_hlimg_maxwidth: "85%",
 };
 
 if (!(typeof hlimg_options === 'undefined')) {
@@ -119,6 +120,7 @@ for (var i = 0; i < imoges.length; i++) {
   if (imoges.item(i).getAttribute("href") != null) {
     newimoges.dataset.href = imoges.item(i).getAttribute("href");
   }
+  newimoges.style.maxWidth = hlimg_opt.styling_hlimg_maxwidth;
   newimoges.title = "Click to show image";
   newimoges.classList.add("hl-img");
   imoges.item(i).parentNode.replaceChild(newimoges, imoges.item(i));
