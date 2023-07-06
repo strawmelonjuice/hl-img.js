@@ -92,7 +92,7 @@ Note that these changes happen globally, so they'll be applied to the entire pag
 
   - Closing modal
 
-    - `styling_closenotif_positioning` (string) – CSS code for positioning the closing modal. Default: `"top: 2em; right: 2em;"`
+    - `styling_closenotif_positioning` (string) – CSS code for positioning the closing modal. Default: `"top: 2em; right: 2em"`
 
     - `styling_closenotif_colors_background` (string) – Background colour for the closing modal. Default: `"#000"`
 
@@ -110,7 +110,7 @@ Note that these changes happen globally, so they'll be applied to the entire pag
 
     - `styling_imageshow_zIndex` (number) – Z-Index for the image when highlighted, the Z-Index of the closing modal will always be this +1. CSS value. Default: `900`
 
-    -   `styling_imageshow_positioning` (string) – CSS code for positioning the highlighted image. Default: `top: 20%; bottom: 20%; left: 10%; right: 10%;"`
+    -   `styling_imageshow_positioning` (string) – CSS code for positioning the highlighted image. Default: `top: 20%; bottom: 20%; left: 10%; right: 10%"`
 
     - `styling_imageshow_colors_background` (string) – Background colour for highlighted image -- shows when image is transparent. Default: `"#f5f5f5"`
 

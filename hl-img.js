@@ -119,7 +119,6 @@ for (var i = 0; i < imoges.length; i++) {
   if (imoges.item(i).getAttribute("href") != null) {
     newimoges.dataset.href = imoges.item(i).getAttribute("href");
   }
-  newimoges.style.maxWidth = "80%";
   newimoges.title = "Click to show image";
   newimoges.classList.add("hl-img");
   imoges.item(i).parentNode.replaceChild(newimoges, imoges.item(i));
