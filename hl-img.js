@@ -49,7 +49,7 @@ var css = `
       margin: auto;
       ${hlimg_opt.styling_imageshow_positioning};
       z-index: ${hlimg_opt.styling_imageshow_zIndex};
-      background-color: ${styling_imageshow_colors_background};
+      background-color: ${hlimg_opt.styling_imageshow_colors_background};
       border-radius: ${hlimg_opt.styling_imageshow_border_radius};
       border: ${hlimg_opt.styling_imageshow_border_color} ${hlimg_opt.styling_imageshow_border_type} ${hlimg_opt.styling_imageshow_border_thickness};
       box-shadow: -53px -38px 95px 0px rgba(0, 0, 0, 0.86);
