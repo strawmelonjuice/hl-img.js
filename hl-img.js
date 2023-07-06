@@ -49,9 +49,9 @@ var css = `
       margin: auto;
       ${hlimg_opt.styling_imageshow_positioning};
       z-index: ${hlimg_opt.styling_imageshow_zIndex};
-      background-color: whitesmoke;
+      background-color: ${styling_imageshow_colors_background};
       border-radius: ${hlimg_opt.styling_imageshow_border_radius};
-      border: currentColor solid .2em;
+      border: ${hlimg_opt.styling_imageshow_border_color} ${hlimg_opt.styling_imageshow_border_type} ${hlimg_opt.styling_imageshow_border_thickness};
       box-shadow: -53px -38px 95px 0px rgba(0, 0, 0, 0.86);
         -webkit-box-shadow: -53px -38px 95px 0px rgba(0, 0, 0, 0.86);
         -moz-box-shadow: -53px -38px 95px 0px rgba(0, 0, 0, 0.86);
