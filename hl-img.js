@@ -35,7 +35,7 @@ var css = `
     cursor: zoom-in;
   }
   #closenotifelm {
-      position: absolute;
+      position: fixed;
       ${hlimg_opt.styling_closenotif_positioning};
       background-color: ${hlimg_opt.styling_closenotif_colors_background};
       color: ${hlimg_opt.styling_closenotif_colors_text};
@@ -46,7 +46,7 @@ var css = `
       z-index: ${hlimg_opt.styling_imageshow_zIndex + 1};
   }
   img.imageshow {
-      position: absolute;
+      position: fixed;
       margin: auto;
       ${hlimg_opt.styling_imageshow_positioning};
       z-index: ${hlimg_opt.styling_imageshow_zIndex};
