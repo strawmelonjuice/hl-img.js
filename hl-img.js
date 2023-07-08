@@ -64,7 +64,7 @@ styleSheet.innerHTML = css;
 document.head.appendChild(styleSheet);
 
 var imoges = document.getElementsByTagName("hl-img");
-for (var i = 0; i < imoges.length; i++) {
+for (var i = imoges.length - 1; i >= 0; i--) {
   var newimogesid =
     "hl-img-" +
     Math.floor(
