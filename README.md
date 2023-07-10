@@ -11,13 +11,17 @@ I added a custom element into my site for highlightable images, now I need to ma
 
 _Minified_
 ```html
-<script defer src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@latest/hl-img.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/hl-img@latest/hl-img.min.js"></script>
 ```
 _Unminified_
 ```html
-<script defer src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@latest/hl-img.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/hl-img@latest/hl-img.js"></script>
 ```
 Thanks to the `defer` attribute, they'll load after the body is loaded, so you _can_ place them anywhere. However, for best reliability, please add this at the end of the `<body>`.
+## Install using NPM
+```bash
+npm i hl-img
+```
 
 ### Version-specific
 
