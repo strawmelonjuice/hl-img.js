@@ -1,3 +1,4 @@
+const ver = "1.10.4";
 const hlimg_options_default = {
   timing_fade_opacity: 0.5,
   timing_pop_location: 700,
@@ -19,7 +20,7 @@ const hlimg_options_default = {
   styling_hlimg_maxwidth: "80%",
 };
 
-if (!(typeof hlimg_options === 'undefined')) {
+if (!(typeof hlimg_options === "undefined")) {
   var hlimg_opt = Object.assign(hlimg_options_default, hlimg_options);
 } else {
   var hlimg_opt = hlimg_options_default;
@@ -52,7 +53,9 @@ var css = `
       z-index: ${hlimg_opt.styling_imageshow_zIndex};
       background-color: ${hlimg_opt.styling_imageshow_colors_background};
       border-radius: ${hlimg_opt.styling_imageshow_border_radius};
-      border: ${hlimg_opt.styling_imageshow_border_color} ${hlimg_opt.styling_imageshow_border_type} ${hlimg_opt.styling_imageshow_border_thickness};
+      border: ${hlimg_opt.styling_imageshow_border_color} ${
+  hlimg_opt.styling_imageshow_border_type
+} ${hlimg_opt.styling_imageshow_border_thickness};
       box-shadow: -53px -38px 95px 0px rgba(0, 0, 0, 0.86);
         -webkit-box-shadow: -53px -38px 95px 0px rgba(0, 0, 0, 0.86);
         -moz-box-shadow: -53px -38px 95px 0px rgba(0, 0, 0, 0.86);
@@ -184,7 +187,7 @@ function imageshow(action, elem) {
       console.log("2/2 Zooming out of " + elem.id);
       elem.classList.remove("imageshow");
       elem.setAttribute("onclick", "imageshow(1, this)");
-    elem.style.cursor = "";
+      elem.style.cursor = "";
       if (elem.dataset.htmlheight != null) {
         elem.style.height = elem.dataset.htmlheight;
         elem.setAttribute("height", elem.dataset.htmlheight);
@@ -201,7 +204,7 @@ function imageshow(action, elem) {
   }
 }
 console.info(
-  "%c hl-img.js by Mar was loaded!\n %cfor more info check it out on GitHub:\n%chttps://github.com/strawmelonjuice/hl-img.js/",
+  `%c hl-img.js by Mar was loaded!%c\nVersion: ${ver}\n\r\n for more info check it out on GitHub:\n%chttps://github.com/strawmelonjuice/hl-img.js/`,
   "color: #8A2BE2; font-size:15px;",
   "color: black; font-size:12px;",
   "color: blue; font-size:12px;"

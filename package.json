@@ -1,6 +1,6 @@
 {
   "name": "hl-img",
-  "version": "1.10.3",
+  "version": "1.10.4",
   "description": "I added a custom element into my site for highlightable images, now I need to make it a repo so I don't lose track.",
   "browser": "hl-img.js",
   "directories": {
