@@ -16,7 +16,7 @@ const hlimg_options_default = {
   styling_imageshow_border_type: "solid",
   styling_imageshow_border_color: "currentColor",
   styling_imageshow_border_radius: "0%",
-  styling_hlimg_maxwidth: "95%",
+  styling_hlimg_maxwidth: "80%",
 };
 
 if (!(typeof hlimg_options === 'undefined')) {
