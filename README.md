@@ -67,6 +67,9 @@ An example of how an custom configuration would look in HTML:
     </head>
 <body>
    ...
+    <main>
+        ...
+    </main>
 <script type="text/javascript">
     const hlimg_options = {
       styling_closenotif_positioning: "bottom: 2em; right: 4em;",
@@ -77,7 +80,7 @@ An example of how an custom configuration would look in HTML:
       styling_imageshow_border_radius: "25%",
 	};
 </script>
-<script defer src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@latest/hl-img.js"></script>
+<script defer src="hl-img.js"></script>
 </body>
 </html>
 ```
