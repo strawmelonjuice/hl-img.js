@@ -1,0 +1,29 @@
+{
+  "name": "hl-img",
+  "version": "1.10.3",
+  "description": "I added a custom element into my site for highlightable images, now I need to make it a repo so I don't lose track.",
+  "browser": "hl-img.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strawmelonjuice/hl-img.js.git"
+  },
+  "author": {
+    "name": "Mar / MLC Bloeiman / Strawmelonjuice",
+    "url": "https://strawmelonjuice.com/?p=projects"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/strawmelonjuice/hl-img.js/issues"
+  },
+  "homepage": "https://github.com/strawmelonjuice/hl-img.js#readme",
+  "funding": {
+    "type": "individual",
+    "url": "https://strawmelonjuice.com/?p=support"
+  }
+}
