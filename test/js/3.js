@@ -4,7 +4,13 @@ setTimeout(function () {
     try {
         output = document.getElementById('hl-img-version').value;        
     } catch (TypeError) {
-        output = "1.10.4 or older."
+        if (ver !== null) {
+            output = ver;
+        } else if (hlimg_ver !== null) {
+            output = hlimg_ver;
+        } else {
+            output = "1.10.4 or older."
+        }
     }
     output = "v" + output;
     window.parent.hlimgversions.latest = output;
