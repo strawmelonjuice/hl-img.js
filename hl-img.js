@@ -1,4 +1,4 @@
-const ver = "1.10.5";
+const hlimg_ver = "1.10.5 - not released";
 const hlimg_options_default = {
   timing_fade_opacity: 0.5,
   timing_pop_location: 700,
@@ -204,7 +204,7 @@ function imageshow(action, elem) {
   }
 }
 console.info(
-  `%c hl-img.js by Mar was loaded!%c\nVersion: ${ver}\n\r\n for more info check it out on GitHub:\n%chttps://github.com/strawmelonjuice/hl-img.js/`,
+  `%c hl-img.js by Mar was loaded!%c\nVersion: ${hlimg_ver}\n\r\n for more info check it out on GitHub:\n%chttps://github.com/strawmelonjuice/hl-img.js/`,
   "color: #8A2BE2; font-size:15px;",
   "color: black; font-size:12px;",
   "color: blue; font-size:12px;"
