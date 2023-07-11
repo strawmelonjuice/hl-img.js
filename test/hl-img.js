@@ -65,6 +65,11 @@ var styleSheet = document.createElement("style");
 styleSheet.innerHTML = css;
 document.head.appendChild(styleSheet);
 
+var versionDec = document.createElement("data");
+versionDec.id = "hl-img-version";
+versionDec.value = hlimg_ver;
+document.head.appendChild(versionDec);
+
 var imoges = document.getElementsByTagName("hl-img");
 for (var i = imoges.length - 1; i >= 0; i--) {
   var newimogesid =
