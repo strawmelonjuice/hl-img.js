@@ -13,7 +13,7 @@ I added a custom element into my site for highlightable images, now I need to ma
 
 #### From GitHub (per commit)
 <details> 
-  <summary>**May be a bit behind on GitHub due to cache refreshes! Is also hard to debug, as there is no exact version number!**</summary>
+  <summary><b>May be a bit behind on GitHub due to cache refreshes! Is also hard to debug, as there is no exact version number!</b></summary>
 
   _Minified_
 ```html
