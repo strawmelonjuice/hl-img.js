@@ -19,7 +19,6 @@ const hlimg_options_default = {
   styling_imageshow_border_radius: "0%",
   styling_hlimg_maxwidth: "80%",
 };
-
 if (!(typeof hlimg_options === "undefined")) {
   var hlimg_opt = Object.assign(hlimg_options_default, hlimg_options);
 } else {
