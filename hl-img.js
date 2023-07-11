@@ -1,4 +1,4 @@
-const ver = "1.10.4";
+const ver = "1.10.5";
 const hlimg_options_default = {
   timing_fade_opacity: 0.5,
   timing_pop_location: 700,
