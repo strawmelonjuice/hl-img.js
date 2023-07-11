@@ -10,8 +10,25 @@ I added a custom element into my site for highlightable images, now I need to ma
 
 ## Embed using jsdelivr
 ### Latest version
-**May be a bit behind on GitHub due to cache refreshes! Is also hard to debug, as there is no exact version number!**
 
+#### From GitHub (per commit)
+<details> 
+  <summary>**May be a bit behind on GitHub due to cache refreshes! Is also hard to debug, as there is no exact version number!**</summary>
+
+  _Minified_
+```html
+<script defer src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@<commit id>/hl-img.min.js"></script>
+```
+
+_Unminified_
+```html
+<script defer src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@<commit id>/hl-img.js"></script>
+```
+
+Thanks to the `defer` attribute, they'll load after the body is loaded, so you _can_ place them anywhere. However, for best reliability, please add this at the end of the `<body>`.
+</details>
+
+#### From NPM (per commit)
 _Minified_
 ```html
 <script defer src="https://cdn.jsdelivr.net/npm/hl-img@latest/hl-img.min.js"></script>
@@ -21,14 +38,15 @@ _Unminified_
 <script defer src="https://cdn.jsdelivr.net/npm/hl-img@latest/hl-img.js"></script>
 ```
 Thanks to the `defer` attribute, they'll load after the body is loaded, so you _can_ place them anywhere. However, for best reliability, please add this at the end of the `<body>`.
+
+### Version-specific
+
+For version-specific jsdelivr's, see <https://cdn.jsdelivr.net/npm/hl-img/>.
 ## Install using NPM
 ```bash
 npm i hl-img
 ```
 
-### Version-specific
-
-For version-specific jsdelivr's, see <https://www.jsdelivr.com/package/gh/strawmelonjuice/hl-img.js?tab=files>.
 ## Attributes
 ### An example
 ```html
