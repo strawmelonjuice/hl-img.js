@@ -28,14 +28,14 @@ _Unminified_
 Thanks to the `defer` attribute, they'll load after the body is loaded, so you _can_ place them anywhere. However, for best reliability, please add this at the end of the `<body>`.
 </details>
 
-#### From NPM (per commit)
+#### From NPM (per version)
 _Minified_
 ```html
-<script defer src="https://cdn.jsdelivr.net/npm/hl-img@latest/hl-img.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/hl-img@1/hl-img.min.js"></script>
 ```
 _Unminified_
 ```html
-<script defer src="https://cdn.jsdelivr.net/npm/hl-img@latest/hl-img.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/hl-img@1/hl-img.js"></script>
 ```
 Thanks to the `defer` attribute, they'll load after the body is loaded, so you _can_ place them anywhere. However, for best reliability, please add this at the end of the `<body>`.
 
