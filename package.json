@@ -9,7 +9,7 @@
   },
   "files": [],
   "scripts": {
-    "test": "npx http-server ./ -p 8090 && http://localhost:8090"
+    "test": "npx http-server ./ -p 8090"
   },
   "repository": {
     "type": "git",
