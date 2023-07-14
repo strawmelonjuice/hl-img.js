@@ -7,6 +7,12 @@
   "directories": {
     "test": "test"
   },
+  "keywords": [
+    "css",
+    "css-in-js",
+    "browser",
+    "images"
+  ],
   "files": [],
   "scripts": {
     "test": "npx http-server ./ -p 8090"
