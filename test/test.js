@@ -1,14 +1,14 @@
 var example = `
 <h3>Image 1</h3>
-<hl-img preview="https://strawmelonjuice.com/assets/img/media/art/MM2.png" alt="MouseMouse!" highlight="https://strawmelonjuice.com/assets/img/media/art/MM2.webp" href="https://strawmelonjuice.com/" style="width: 80%; max-width: 100%"></hl-img>
+<hl-img preview="../png/one.png" alt="MouseMouse!" style="width: 80%; max-width: 100%"></hl-img>
 
 <h3>Image 2</h3>
-<hl-img preview="https://strawmelonjuice.com/assets/img/media/art/MM2.png" alt="MouseMouse!" highlight="https://strawmelonjuice.com/assets/img/media/art/MM2.webp" style="height: 20px; bg-color: red"></hl-img>
-<hl-img preview="https://strawmelonjuice.com/assets/img/media/art/MM2.png" alt="MouseMouse!" highlight="https://strawmelonjuice.com/assets/img/media/art/MM2.png" style="height: 20px; bg-color: red"></hl-img>
-<hl-img preview="https://strawmelonjuice.com/assets/img/media/art/MM2.png" alt="MouseMouse!" highlight="https://strawmelonjuice.com/assets/img/media/art/MM2.webp" style="height: 20px; bg-color: red"></hl-img>
+<hl-img preview="../png/two.png" alt="Example image 2" highlight="../jpg/two.jpg" style="height: 20px; bg-color: red"></hl-img>
+<hl-img preview="../png/two.png" alt="Example image 2" highlight="../jpg/two.jpg" style="height: 20px; bg-color: red"></hl-img>
+<hl-img preview="../png/two.png" alt="Example image 2" highlight="../jpg/two.jpg" style="height: 20px; bg-color: red"></hl-img>
 
 <h3>Image 3</h3>
-<hl-img preview="https://strawmelonjuice.com/assets/img/media/art/MM2.png" alt="MouseMouse!" highlight="https://strawmelonjuice.com/assets/img/media/art/MM2.webp" style="width: 80%"></hl-img>
+<hl-img preview="../png/three.png" alt="MouseMouse!" highlight="../jpg/three.jpg" style="width: 80%" href="https://example.com/"></hl-img>
 `;
 const hlimg_options = {
       styling_closenotif_positioning: "bottom: 2em; right: 4em;",
