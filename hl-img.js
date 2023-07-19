@@ -34,6 +34,7 @@ var css = `
   }
   .hl-img:not(.imageshow) {
     cursor: zoom-in;
+    object-fit: contain;
   }
   #closenotifelm {
       position: fixed;
