@@ -18,6 +18,7 @@ const hlimg_options_default = {
   styling_imageshow_border_color: "currentColor",
   styling_imageshow_border_radius: "0%",
   styling_hlimg_maxwidth: "80%",
+  styling_hlimg_maxheight: "100%",
 };
 if (!(typeof hlimg_options === "undefined")) {
   var hlimg_opt = Object.assign(hlimg_options_default, hlimg_options);
@@ -128,6 +129,7 @@ for (var i = imoges.length - 1; i >= 0; i--) {
     newimoges.dataset.href = imoges.item(i).getAttribute("href");
   }
   newimoges.style.maxWidth = hlimg_opt.styling_hlimg_maxwidth;
+  newimoges.style.maxHeight = hlimg_opt.styling_hlimg_maxheight;
   newimoges.title = "Click to show image";
   newimoges.classList.add("hl-img");
   imoges.item(i).parentNode.replaceChild(newimoges, imoges.item(i));

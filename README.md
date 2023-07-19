@@ -144,5 +144,5 @@ Note that these changes happen globally, so they'll be applied to the entire pag
     - `styling_imageshow_border_type` (string) – Type of the highlighted images' border, CSS value. Default: `"solid"`
     - `styling_imageshow_border_color` (string) – Highlighted images' border color. Default:`"currentColor"`
     - `styling_imageshow_border_radius` (string) – Border radius for highlighted image. Default:`"0%"`
-
-  - `styling_hlimg_maxwidth` (string) – Max-width for all `<hlimg>`'s. Set to `""` To disable. Default: `"80%"`
+    - `styling_hlimg_maxwidth` (string) – Max-width for all `<hlimg>`'s. Set to `""` To disable. Default: `"80%"`
+    - `styling_hlimg_maxwidth` (string) – Max-height for all `<hlimg>`'s. Set to `""` To disable. Default: `"100%"`
