@@ -1,4 +1,5 @@
-const hlimg_ver = "1.10.10";
+const hlimg_ver = "1.10.11";
+let hlimg_opt;
 const hlimg_options_default = {
   timing_fade_opacity: 0.5,
   timing_pop_location: 700,
@@ -21,12 +22,12 @@ const hlimg_options_default = {
   styling_hlimg_maxheight: "100%",
 };
 if (!(typeof hlimg_options === "undefined")) {
-  var hlimg_opt = Object.assign(hlimg_options_default, hlimg_options);
+  hlimg_opt = Object.assign(hlimg_options_default, hlimg_options);
 } else {
-  var hlimg_opt = hlimg_options_default;
+  hlimg_opt = hlimg_options_default;
 }
 
-var css = `
+const css = `
   img.hl-img {
       -webkit-transition: opacity ${hlimg_opt.timing_fade_opacity}s ease-in-out;
       -moz-transition: opacity ${hlimg_opt.timing_fade_opacity}s ease-in-out;
@@ -63,23 +64,22 @@ var css = `
   }
 `;
 
-var styleSheet = document.createElement("style");
+const styleSheet = document.createElement("style");
 styleSheet.innerHTML = css;
 document.head.appendChild(styleSheet);
 
-var versionDec = document.createElement("data");
+const versionDec = document.createElement("data");
 versionDec.id = "hl-img-version";
 versionDec.value = hlimg_ver;
 document.head.appendChild(versionDec);
 
-var imoges = document.getElementsByTagName("hl-img");
-for (var i = imoges.length - 1; i >= 0; i--) {
-  var newimogesid =
-    "hl-img-" +
-    Math.floor(
+const imoges = document.getElementsByTagName("hl-img");
+for (i = imoges.length - 1; i >= 0; i--) {
+  const newimogesid =
+    `hl-img-${Math.floor(
       Math.random() * (Math.floor(9999) - Math.ceil(1000) + 1) + Math.ceil(1000)
-    );
-  var newimoges = document.createElement("img");
+    )}`;
+  const newimoges = document.createElement("img");
   newimoges.alt = imoges.item(i).getAttribute("alt");
   if (imoges.item(i).getAttribute("style") != null) {
     newimoges.setAttribute("style", imoges.item(i).getAttribute("style"));
@@ -147,21 +147,19 @@ if (document.getElementsByClassName("hl-img")[0]) {
 closenotif = document.getElementById("closenotifelm");
 function imageshow(action, elem) {
   if (action) {
-    console.log("1/2 Zooming in to " + elem.id);
+    console.log(`1/2 Zooming in to ${elem.id}`);
     elem.style.opacity = "0%";
     setTimeout(function () {
-      console.log("2/2 Zooming in to " + elem.id);
+      console.log(`2/2 Zooming in to ${elem.id}`);
       elem.classList.add("imageshow");
       elem.setAttribute("onclick", "");
       if (elem.dataset.href != null) {
         elem.setAttribute(
           "onclick",
-          "window.open('" + elem.dataset.href + "');"
+          `window.open('${elem.dataset.href}');`
         );
         closenotif.innerHTML =
-          '<p>Click outside of the image to put it back in place! Or click on the image again to open <a href="' +
-          elem.dataset.href +
-          '" target="_blank">this link</a> in a new tab.</p>';
+          `<p>Click outside of the image to put it back in place! Or click on the image again to open <a href="${elem.dataset.href}" target="_blank">this link</a> in a new tab.</p>`;
         elem.style.cursor = "pointer";
       } else {
         closenotif.innerHTML =
@@ -188,10 +186,10 @@ function imageshow(action, elem) {
       { signal: abortController.signal }
     );
   } else {
-    console.log("1/2 Zooming out of " + elem.id);
+    console.log(`1/2 Zooming out of ${elem.id}`);
     elem.style.opacity = "0%";
     setTimeout(function () {
-      console.log("2/2 Zooming out of " + elem.id);
+      console.log(`2/2 Zooming out of ${elem.id}`);
       elem.classList.remove("imageshow");
       elem.setAttribute("onclick", "imageshow(1, this)");
       elem.style.cursor = "";
