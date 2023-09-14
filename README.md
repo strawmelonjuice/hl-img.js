@@ -15,25 +15,66 @@ I added a custom element into my site for highlightable images, now I need to ma
 
   _Minified_
 ```html
-<script defer src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@<commit id>/hl-img.min.js"></script>
+<script id="hlimg-options" type="application/json">{"timing_fade_opacity": 0.5,	"timing_pop_location": 700,	"styling_closenotif_positioning": "top: 2em; right: 2em;",	"styling_closenotif_colors_background": "#000",	"styling_closenotif_colors_text": "#FFF",	"styling_closenotif_border_thickness": "2.5px",	"styling_closenotif_border_type": "solid","styling_closenotif_border_color": "#848484","styling_closenotif_padding": "4px","styling_imageshow_zIndex": 900,"styling_imageshow_positioning": "top: 20%; bottom: 20%; left: 10%; right: 10%;","styling_imageshow_colors_background": "#f5f5f5","styling_imageshow_border_thickness": ".2em","styling_imageshow_border_type": "solid","styling_imageshow_border_color": "currentColor","styling_imageshow_border_radius": "0%","styling_hlimg_maxwidth": "80%","styling_hlimg_maxheight": "100%"}</script>
+<script defer type="module" src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@<commit id>/hl-img.min.js"></script>
 ```
 
 _Unminified_
 ```html
-<script defer src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@<commit id>/hl-img.js"></script>
+<script id="hlimg-options" type="application/json">{
+	"timing_fade_opacity": 0.5,
+	"timing_pop_location": 700,
+	"styling_closenotif_positioning": "top: 2em; right: 2em;",
+	"styling_closenotif_colors_background": "#000",
+	"styling_closenotif_colors_text": "#FFF",
+	"styling_closenotif_border_thickness": "2.5px",
+	"styling_closenotif_border_type": "solid",
+	"styling_closenotif_border_color": "#848484",
+	"styling_closenotif_padding": "4px",
+	"styling_imageshow_zIndex": 900,
+	"styling_imageshow_positioning": "top: 20%; bottom: 20%; left: 10%; right: 10%;",
+	"styling_imageshow_colors_background": "#f5f5f5",
+	"styling_imageshow_border_thickness": ".2em",
+	"styling_imageshow_border_type": "solid",
+	"styling_imageshow_border_color": "currentColor",
+	"styling_imageshow_border_radius": "0%",
+	"styling_hlimg_maxwidth": "80%",
+	"styling_hlimg_maxheight": "100%"
+}</script>
+<script defer type="module" src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@<commit id>/hl-img.js"></script>
 ```
 
-Thanks to the `defer` attribute, they'll load after the body is loaded, so you _can_ place them anywhere. However, for best reliability, please add this at the end of the `<body>`.
+Thanks to the `defer` attribute, they'll load after the body and config is loaded, so you _can_ place them anywhere. However, for best reliability, please add this at the end of the `<body>`.
 </details>
 
 #### From NPM (per version)
 _Minified_
 ```html
-<script defer src="https://cdn.jsdelivr.net/npm/hl-img@1/hl-img.min.js"></script>
+<script defer type="module" src="https://cdn.jsdelivr.net/npm/hl-img@1/hl-img.min.js"></script>
 ```
 _Unminified_
 ```html
-<script defer src="https://cdn.jsdelivr.net/npm/hl-img@1/hl-img.js"></script>
+<script id="hlimg-options" type="application/json">{
+	"timing_fade_opacity": 0.5,
+	"timing_pop_location": 700,
+	"styling_closenotif_positioning": "top: 2em; right: 2em;",
+	"styling_closenotif_colors_background": "#000",
+	"styling_closenotif_colors_text": "#FFF",
+	"styling_closenotif_border_thickness": "2.5px",
+	"styling_closenotif_border_type": "solid",
+	"styling_closenotif_border_color": "#848484",
+	"styling_closenotif_padding": "4px",
+	"styling_imageshow_zIndex": 900,
+	"styling_imageshow_positioning": "top: 20%; bottom: 20%; left: 10%; right: 10%;",
+	"styling_imageshow_colors_background": "#f5f5f5",
+	"styling_imageshow_border_thickness": ".2em",
+	"styling_imageshow_border_type": "solid",
+	"styling_imageshow_border_color": "currentColor",
+	"styling_imageshow_border_radius": "0%",
+	"styling_hlimg_maxwidth": "80%",
+	"styling_hlimg_maxheight": "100%"
+}</script>
+<script defer type="module" src="https://cdn.jsdelivr.net/npm/hl-img@1/hl-img.js"></script>
 ```
 Thanks to the `defer` attribute, they'll load after the body is loaded, so you _can_ place them anywhere. However, for best reliability, please add this at the end of the `<body>`.
 
@@ -44,6 +85,8 @@ For version-specific jsdelivr's, see <https://cdn.jsdelivr.net/npm/hl-img/>.
 ```bash
 npm i hl-img
 ```
+And then embed it from your own host.
+
 
 ## Attributes
 ### An example
@@ -89,17 +132,10 @@ An example of how an custom configuration would look in HTML:
     <main>
         ...
     </main>
-<script type="text/javascript">
-    const hlimg_options = {
-      styling_closenotif_positioning: "bottom: 2em; right: 4em;",
-      styling_closenotif_colors_background: "#FFF",
-      styling_closenotif_colors_text: "#000",
-      styling_imageshow_zIndex: 900000,
-      styling_imageshow_colors_background: "#000",
-      styling_imageshow_border_radius: "25%",
-	};
+<script id="hlimg-options" type="application/json">
+    {"styling_closenotif_positioning":"bottom: 2em; right: 4em;","styling_closenotif_colors_background":"#FFF","styling_closenotif_colors_text":"#000","styling_imageshow_zIndex":900000,"styling_imageshow_colors_background":"#000","styling_imageshow_border_radius":"25%"}
 </script>
-<script defer src="hl-img.js"></script>
+<script defer type="module" src="hl-img.js"></script>
 </body>
 </html>
 ```
