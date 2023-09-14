@@ -44,7 +44,7 @@ app.get("/", (req, res) => {
     <!DOCTYPE html>
 <HTML>
 <HEAD>
-<TITLE>hl-img.js test</TITLE>
+<TITLE>hl-img test</TITLE>
 <script>
 window.hlimgversions = {}
 </script>
@@ -72,9 +72,9 @@ app.get("/1.html", (req, res) => {
 <body>
   <p>
   <ul style="list-style:none;">
-    <li style="float: left; display: inline; font-size: 9px">Local <span class="code-block-1">hl-img.js</span>, version
+    <li style="float: left; display: inline; font-size: 9px">Local <span class="code-block-1">hl-img.ts</span>, version
       <code id="localver" class="ver-d">local version</code></li>
-    <li style="float: right; display: inline; font-size: 9px">JSdelivr/NPM <span class="code-block-1">hl-img.js</span>,
+    <li style="float: right; display: inline; font-size: 9px">Release <span class="code-block-1">hl-img.js</span>,
       version <code id="latestver" class="ver-d">latest release version</code></li>
   </ul>
   </p>

@@ -1,11 +1,11 @@
-![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fstrawmelonjuice%2Fhl-img.js%2Fmain%2Fpackage.json&query=%24.version&label=Version&labelColor=%23313333&color=%23eebcbc&link=https%3A%2F%2Fgithub.com%2Fstrawmelonjuice%2Fhl-img.js&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fhl-img%3FactiveTab%3Dversions) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/strawmelonjuice/hl-img.js/blob/main/LICENSE)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fstrawmelonjuice%2Fhl-img%2Fmain%2Fpackage.json&query=%24.version&label=Version&labelColor=%23313333&color=%23eebcbc&link=https%3A%2F%2Fgithub.com%2Fstrawmelonjuice%2Fhl-img&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fhl-img%3FactiveTab%3Dversions) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/strawmelonjuice/hl-img/blob/main/LICENSE)
 [![](https://data.JSdelivr.com/v1/package/npm/hl-img/badge)](https://www.JSdelivr.com/package/npm/hl-img)
 
 # hl-img
 
 I added a custom element into my site for highlightable images, now I need to make it a repo so I don't lose track.
 ## NOTE:
-> Google does not like the use of elements like these, mainly because browsers or bots that don't fire the javascript, will not be able to see any images. _Though Google's HTML-checker web.dev loads `hl-img.js` in their tests, allowing it to pass that test after all._
+> Google does not like the use of elements like these, mainly because browsers or bots that don't fire the javascript, will not be able to see any images. _Though Google's HTML-checker web.dev loads `hl-img` in their tests, allowing it to pass that test after all._
 
 ## How to embed
 
@@ -102,9 +102,9 @@ And then embed it from your own host.
 
 - `src` – `<hl-img>`-elements do support `<img>`'s `src`-attribute, but will only use it as a fallback, in case `preview` is not specified.
 
-- `style` – Styles are inherited, but may be altered by `hl-img.js`.
+- `style` – Styles are inherited, but may be altered by `hl-img`.
 
-- `id` and `class` – Ids and classes are inherited, however, if none are specified, `hl-img.js` will assign them. It will also add the `hl-image` class in all cases.
+- `id` and `class` – Ids and classes are inherited, however, if none are specified, `hl-img` will assign them. It will also add the `hl-image` class in all cases.
 
 - `width` and `height` – Are inherited.
 
@@ -114,7 +114,7 @@ Add an issue if you're missing anything.
 
 ## Customization
 
-Before calling `hl-img.js`, you can declare some of it's options, if you don't, their defaults will be used.
+Before calling `hl-img`, you can declare some of it's options, if you don't, their defaults will be used.
 
 An example of how an custom configuration would look in HTML:
 
@@ -131,12 +131,12 @@ An example of how an custom configuration would look in HTML:
 <script id="hlimg-options" type="application/json">
     {"styling_closenotif_positioning":"bottom: 2em; right: 4em;","styling_closenotif_colors_background":"#FFF","styling_closenotif_colors_text":"#000","styling_imageshow_zIndex":900000,"styling_imageshow_colors_background":"#000","styling_imageshow_border_radius":"25%"}
 </script>
-<script defer type="module" src="hl-img.js"></script>
+<script defer type="module" src="hl-img"></script>
 </body>
 </html>
 ```
 
-Note that these changes happen globally, so they'll be applied to the entire page, the moment `hl-img.js` is ran.
+Note that these changes happen globally, so they'll be applied to the entire page, the moment `hl-img` is ran.
 
 ### List of customization variables
 
