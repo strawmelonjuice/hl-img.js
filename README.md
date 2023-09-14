@@ -1,58 +1,26 @@
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fstrawmelonjuice%2Fhl-img.js%2Fmain%2Fpackage.json&query=%24.version&label=Version&labelColor=%23313333&color=%23eebcbc&link=https%3A%2F%2Fgithub.com%2Fstrawmelonjuice%2Fhl-img.js&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fhl-img%3FactiveTab%3Dversions) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/strawmelonjuice/hl-img.js/blob/main/LICENSE)
-[![](https://data.jsdelivr.com/v1/package/npm/hl-img/badge)](https://www.jsdelivr.com/package/npm/hl-img)
+[![](https://data.JSdelivr.com/v1/package/npm/hl-img/badge)](https://www.JSdelivr.com/package/npm/hl-img)
+
 # hl-img
 
 I added a custom element into my site for highlightable images, now I need to make it a repo so I don't lose track.
 ## NOTE:
 > Google does not like the use of elements like these, mainly because browsers or bots that don't fire the javascript, will not be able to see any images. _Though Google's HTML-checker web.dev loads `hl-img.js` in their tests, allowing it to pass that test after all._
 
-## Embed using jsdelivr
-### Latest version
+## How to embed
 
-#### From GitHub (per commit)
-<details> 
-  <summary><b>May be a bit behind on GitHub due to cache refreshes! Is also hard to debug, as there is no exact version number!</b></summary>
+Thanks to the `defer` attribute, they'll load after the body is loaded, so you _can_ place them anywhere. However, for best reliability, please add this at the end of the `<body>`.
 
-  _Minified_
-```html
-<script id="hlimg-options" type="application/json">{"timing_fade_opacity": 0.5,	"timing_pop_location": 700,	"styling_closenotif_positioning": "top: 2em; right: 2em;",	"styling_closenotif_colors_background": "#000",	"styling_closenotif_colors_text": "#FFF",	"styling_closenotif_border_thickness": "2.5px",	"styling_closenotif_border_type": "solid","styling_closenotif_border_color": "#848484","styling_closenotif_padding": "4px","styling_imageshow_zIndex": 900,"styling_imageshow_positioning": "top: 20%; bottom: 20%; left: 10%; right: 10%;","styling_imageshow_colors_background": "#f5f5f5","styling_imageshow_border_thickness": ".2em","styling_imageshow_border_type": "solid","styling_imageshow_border_color": "currentColor","styling_imageshow_border_radius": "0%","styling_hlimg_maxwidth": "80%","styling_hlimg_maxheight": "100%"}</script>
-<script defer type="module" src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@<commit id>/hl-img.min.js"></script>
-```
-
-_Unminified_
-```html
-<script id="hlimg-options" type="application/json">{
-	"timing_fade_opacity": 0.5,
-	"timing_pop_location": 700,
-	"styling_closenotif_positioning": "top: 2em; right: 2em;",
-	"styling_closenotif_colors_background": "#000",
-	"styling_closenotif_colors_text": "#FFF",
-	"styling_closenotif_border_thickness": "2.5px",
-	"styling_closenotif_border_type": "solid",
-	"styling_closenotif_border_color": "#848484",
-	"styling_closenotif_padding": "4px",
-	"styling_imageshow_zIndex": 900,
-	"styling_imageshow_positioning": "top: 20%; bottom: 20%; left: 10%; right: 10%;",
-	"styling_imageshow_colors_background": "#f5f5f5",
-	"styling_imageshow_border_thickness": ".2em",
-	"styling_imageshow_border_type": "solid",
-	"styling_imageshow_border_color": "currentColor",
-	"styling_imageshow_border_radius": "0%",
-	"styling_hlimg_maxwidth": "80%",
-	"styling_hlimg_maxheight": "100%"
-}</script>
-<script defer type="module" src="https://cdn.jsdelivr.net/gh/strawmelonjuice/hl-img.js@<commit id>/hl-img.js"></script>
-```
-
-Thanks to the `defer` attribute, they'll load after the body and config is loaded, so you _can_ place them anywhere. However, for best reliability, please add this at the end of the `<body>`.
-</details>
-
-#### From NPM (per version)
+### From JSdelivr
 _Minified_
 ```html
-<script defer type="module" src="https://cdn.jsdelivr.net/npm/hl-img@1/hl-img.min.js"></script>
+<script id="hlimg-options" type="application/json">{"timing_fade_opacity": 0.5,	"timing_pop_location": 700,	"styling_closenotif_positioning": "top: 2em; right: 2em;",	"styling_closenotif_colors_background": "#000",	"styling_closenotif_colors_text": "#FFF",	"styling_closenotif_border_thickness": "2.5px",	"styling_closenotif_border_type": "solid","styling_closenotif_border_color": "#848484","styling_closenotif_padding": "4px","styling_imageshow_zIndex": 900,"styling_imageshow_positioning": "top: 20%; bottom: 20%; left: 10%; right: 10%;","styling_imageshow_colors_background": "#f5f5f5","styling_imageshow_border_thickness": ".2em","styling_imageshow_border_type": "solid","styling_imageshow_border_color": "currentColor","styling_imageshow_border_radius": "0%","styling_hlimg_maxwidth": "80%","styling_hlimg_maxheight": "100%"}</script>
+<script defer type="module" src="https://cdn.jsdelivr.net/npm/hl-img@2/dist/hl-img.min.js"></script>
 ```
+For the extra-minified version, just use `https://cdn.jsdelivr.net/npm/hl-img@2/dist/hl-img.e.min.js`, instead.
+
 _Unminified_
+
 ```html
 <script id="hlimg-options" type="application/json">{
 	"timing_fade_opacity": 0.5,
@@ -74,18 +42,46 @@ _Unminified_
 	"styling_hlimg_maxwidth": "80%",
 	"styling_hlimg_maxheight": "100%"
 }</script>
-<script defer type="module" src="https://cdn.jsdelivr.net/npm/hl-img@1/hl-img.js"></script>
+<script defer type="module" src="https://cdn.jsdelivr.net/npm/hl-img@2/dist/hl-img.js"></script>
 ```
-Thanks to the `defer` attribute, they'll load after the body is loaded, so you _can_ place them anywhere. However, for best reliability, please add this at the end of the `<body>`.
 
 ### Version-specific
 
-For version-specific jsdelivr's, see <https://cdn.jsdelivr.net/npm/hl-img/>.
+For version-specific JSdelivr's, browse <https://cdn.jsdelivr.net/npm/hl-img/>.
+
+NOTE: Versions before v2 worked really different. See the [old readme](https://github.com/strawmelonjuice/hl-img/blob/7def3ff19eae6368f18c0f7c38d44a4706d08170/README.md) for those.
+
 ## Install using NPM
 ```bash
 npm i hl-img
 ```
 And then embed it from your own host.
+
+```html
+<script id="hlimg-options" type="application/json">{
+	"timing_fade_opacity": 0.5,
+	"timing_pop_location": 700,
+	"styling_closenotif_positioning": "top: 2em; right: 2em;",
+	"styling_closenotif_colors_background": "#000",
+	"styling_closenotif_colors_text": "#FFF",
+	"styling_closenotif_border_thickness": "2.5px",
+	"styling_closenotif_border_type": "solid",
+	"styling_closenotif_border_color": "#848484",
+	"styling_closenotif_padding": "4px",
+	"styling_imageshow_zIndex": 900,
+	"styling_imageshow_positioning": "top: 20%; bottom: 20%; left: 10%; right: 10%;",
+	"styling_imageshow_colors_background": "#f5f5f5",
+	"styling_imageshow_border_thickness": ".2em",
+	"styling_imageshow_border_type": "solid",
+	"styling_imageshow_border_color": "currentColor",
+	"styling_imageshow_border_radius": "0%",
+	"styling_hlimg_maxwidth": "80%",
+	"styling_hlimg_maxheight": "100%"
+}</script>
+<script defer type="module" src="someplace/node_modules/hl-img/dist/hl-img.js"></script>
+```
+
+
 
 
 ## Attributes
