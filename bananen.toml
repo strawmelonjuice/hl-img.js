@@ -1,0 +1,14 @@
+[main]
+bananen_version = "0.0.4-alpha"
+
+[config]
+changelogfile = "changelog.md"
+
+[changes_md]
+unreleased= """"""
+released= """## v2.0.1 release
+
+- <span style="color: red; background-color: #ffcc00">BREAKING!</span> **<span style="color: #0033cc">Update</span>**: We changed over to Typescript and are now a module!
+
+
+"""
