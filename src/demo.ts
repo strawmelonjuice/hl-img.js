@@ -3,8 +3,7 @@ const app = express();
 import fs from "fs";
 import path from "path";
 const port = 3000;
-const demo_js = `
-const hlimg_options = {
+const demo_json = JSON.stringify({
       styling_closenotif_positioning: "bottom: 2em; right: 4em;",
       styling_closenotif_colors_background: "#FFF",
       styling_closenotif_colors_text: "#000",
@@ -12,10 +11,9 @@ const hlimg_options = {
       styling_imageshow_colors_background: "#000",
       styling_imageshow_border_radius: "25%",
       styling_hlimg_maxwidth: "85%",
-	};
-  `;
+	});
 const demo_html = fs.readFileSync(path.join(__dirname,"../demo-files/html/demo.html"), { encoding: "utf8", flag: "r" });
-const demo = `<script>${demo_js}</script>\n${demo_html}`;
+const demo = `<script id="hlimg-options" type="application/json">${demo_json}</script>\n${demo_html}`;
 const styles = `
     #localver {
       background-color: #32a723;
@@ -80,7 +78,7 @@ app.get("/1.html", (req, res) => {
       version <code id="latestver" class="ver-d">latest release version</code></li>
   </ul>
   </p>
-  <p id="infoblock-1">Both are showing the image injected by <span style="font-family: mono">/test/test.js</span>.</p>
+  <p id="infoblock-1">Both are showing the image injected by <span style="font-family: mono">${path.join(__dirname,"../demo-files/html/demo.html")}</span>.</p>
   <script>
     // 3rd file to run.
       setTimeout(function () {
@@ -140,7 +138,7 @@ app.get("/3.html", (req, res) => {
   </head>
   <body>
     <div id="example">${demo}</div>
-    <script defer src="https://cdn.jsdelivr.net/npm/hl-img@latest"></script>
+    <script defer type="module" src="https://cdn.jsdelivr.net/npm/hl-img@2/dist/hl-img.js"></script>
   <script>
     // 2nd file to run
       setTimeout(function () {

@@ -1,11 +1,13 @@
 [main]
-bananen_version = "0.0.4-alpha"
+bananen_version = "0.0.3-alpha"
 
 [config]
-changelogfile = "changelog.md"
+changelogfile = "CHANGELOG.MD"
 
 [changes_md]
-unreleased= """"""
+unreleased= """-  **<span style="color: #0033cc">Update</span>**: Updated demo version to v2+
+-  **<span style="color: #0033cc">Update</span>**: minified inline styling.
+"""
 released= """## v2.0.1 release
 
 - <span style="color: red; background-color: #ffcc00">BREAKING!</span> **<span style="color: #0033cc">Update</span>**: We changed over to Typescript and are now a module!
