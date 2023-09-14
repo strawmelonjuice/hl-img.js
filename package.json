@@ -35,5 +35,8 @@
   "funding": {
     "type": "individual",
     "url": "https://strawmelonjuice.com/?p=support"
+  },
+  "dependencies": {
+    "terser": "^5.19.4"
   }
 }
