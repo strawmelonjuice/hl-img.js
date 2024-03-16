@@ -1,11 +1,18 @@
 {
     "compilerOptions": {
+        "lib": [
+            "DOM",
+            "ES2023"
+        ],
         "outDir": "./dist/",
         "noImplicitAny": true,
-        "module": "es6",
-        "target": "es5",
-        "jsx": "react",
-        "allowJs": true,
-        "moduleResolution": "node"
-    }
+        "module": "CommonJS",
+        "allowJs": true
+    },
+    "exclude": [
+        "dist"
+    ],
+    "include": [
+        "src"
+    ]
 }
